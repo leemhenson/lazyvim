@@ -1,16 +1,20 @@
 return {
+  { "rktjmp/lush.nvim" },
   {
-    "folke/tokyonight.nvim",
+    "rmehri01/onenord.nvim",
     config = function()
-      require("tokyonight").setup({
-        style = "storm",
-        styles = {
-          comments = { italic = false },
-          keywords = { italic = false },
-          functions = {},
-          variables = {},
+      require("onenord").setup({
+        fade_nc = true,
+        disable = {
+          background = true,
         },
       })
     end,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "onenord",
+    },
   },
 }
